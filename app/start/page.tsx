@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/ui/card';
 import { Input } from '@/components/ui/ui/input';
 import { Label } from '@/components/ui/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/ui/radio-group';
+import { toast } from 'sonner';
 import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/ui/Footer';
 import Image from 'next/image';
@@ -25,8 +26,7 @@ export default function Start() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Application submitted",
+    toast("Application submitted", {
       description: "We'll be in touch with you shortly!",
     });
   };
