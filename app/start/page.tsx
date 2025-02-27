@@ -6,7 +6,6 @@ import { Card } from '@/components/ui/ui/card';
 import { Input } from '@/components/ui/ui/input';
 import { Label } from '@/components/ui/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/ui/radio-group';
-import { useToast } from '@/hooks/use-toast';
 import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/ui/Footer';
 import Image from 'next/image';
@@ -17,7 +16,7 @@ export default function Start() {
   const [showWelcome, setShowWelcome] = useState(true);
   const [selectedOption, setSelectedOption] = useState<OptionType>(null);
   const [step, setStep] = useState(1);
-  const { toast } = useToast();
+  
 
   const handleOptionSelect = (option: OptionType) => {
     setSelectedOption(option);
