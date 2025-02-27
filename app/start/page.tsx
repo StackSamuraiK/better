@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent, ChangeEvent } from 'react';
+import { useState, FormEvent } from 'react';
 import { Button } from '@/components/ui/ui/button';
 import { Card } from '@/components/ui/ui/card';
 import { Input } from '@/components/ui/ui/input';
@@ -61,7 +61,7 @@ export default function Start() {
                 />
               </div>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900">Hi, I'm Betsy!</h1>
+            <h1 className="text-4xl font-bold text-gray-900">Hi, I&apos;m Betsy!</h1>
             <p className="mt-3 text-2xl text-gray-700">What can I help you with?</p>
           </div>
           
@@ -115,7 +115,7 @@ export default function Start() {
           </div>
           
           <div className="mt-10 bg-green-50 p-4 rounded">
-            <p className="text-gray-700">After a few questions, you'll unlock:</p>
+            <p className="text-gray-700">After a few questions, you&apos;ll unlock:</p>
           </div>
         </div>
       ) : (
@@ -136,7 +136,7 @@ export default function Start() {
               {step === 1 && (
                 <div className="space-y-6">
                   <div>
-                    <Label>What's your goal?</Label>
+                    <Label>What&apos;s your goal?</Label>
                     <RadioGroup 
                       defaultValue={selectedOption === 'refinance' ? 'refinance' : 'buy'} 
                       className="mt-2"

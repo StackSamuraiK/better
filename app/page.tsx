@@ -70,7 +70,7 @@ export default function Home() {
                       <div className="h-4 w-4 rounded-full bg-[#32cd32] mr-2"></div>
                       <span>Congrats,</span>
                     </div>
-                    <p className="mb-2">You're pre-approved for a loan up to</p>
+                    <p className="mb-2">You&apos;re pre-approved for a loan up to</p>
                     <p className="text-[#32cd32] text-2xl font-bold mb-4">$450,000</p>
                     <div className="bg-[#32cd32] text-white text-xs py-2 px-4 rounded text-center">
                       Go to Pre-approval Letter
@@ -106,14 +106,14 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
                 <div className="text-white">
-                  <p className="text-xl mb-4">"{testimonials[activeTestimonial as keyof typeof testimonials].quote}"</p>
+                  <p className="text-xl mb-4">&ldquo;{testimonials[activeTestimonial as keyof typeof testimonials].quote}&rdquo;</p>
                   <p className="font-semibold">{testimonials[activeTestimonial as keyof typeof testimonials].name} — {testimonials[activeTestimonial as keyof typeof testimonials].role}</p>
                 </div>
               </div>
             </div>
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Find out why<br />we're better.
+                Find out why<br />we&apos;re better.
               </h2>
               <Button className="bg-[#004d40] hover:bg-[#00695c] text-white mb-8">
                 See all our stories
@@ -159,7 +159,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Got questions?</h2>
-            <p className="text-3xl font-semibold text-gray-700">We've got answers</p>
+            <p className="text-3xl font-semibold text-gray-700">We&apos;ve got answers</p>
           </div>
           
           <div className="flex mb-8 overflow-x-auto">

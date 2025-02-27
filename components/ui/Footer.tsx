@@ -11,7 +11,7 @@ const Footer = () => {
             
             <div className="mb-6">
               <h4 className="text-green-700 font-bold mb-2">Better Mortgage</h4>
-              <p className="text-sm">We can't wait to say "Welcome home." Apply 100% online, with expert customer support.</p>
+              <p className="text-sm">We can&apos;t wait to say &quot;Welcome home.&quot; Apply 100% online, with expert customer support.</p>
             </div>
             
             <div className="mb-6">

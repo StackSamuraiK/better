@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card } from '@/components/ui/ui/card';
 import { Input } from '@/components/ui/ui/input';
 import { Label } from '@/components/ui/ui/label';
@@ -30,7 +30,7 @@ export default function MortgageCalculator() {
   const [totalMonthlyPayment, setTotalMonthlyPayment] = useState(0);
   
   
-  const calculatePrincipalInterest = () => {
+  const calculatePrincipalInterest = useCallback(() => {
     const principal = homePrice - downPayment;
     const monthlyRate = interestRate / 100 / 12;
     const numberOfPayments = parseInt(loanTerm) * 12;
@@ -40,25 +40,25 @@ export default function MortgageCalculator() {
       (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
 
     return isNaN(monthlyPayment) ? 0 : monthlyPayment;
-  };
+  }, [homePrice, downPayment, interestRate, loanTerm]);
   
   
-  const calculateTotalPayment = (principalInterest : number) => {
+  const calculateTotalPayment = useCallback((principalInterest: number) => {
     return principalInterest + propertyTax + homeInsurance + hoaFees + utilities;
-  };
+  }, [propertyTax, homeInsurance, hoaFees, utilities]);
 
   useEffect(() => {
     const calculatedPrincipalInterest = calculatePrincipalInterest();
     setPrincipalInterest(calculatedPrincipalInterest);
     setTotalMonthlyPayment(calculateTotalPayment(calculatedPrincipalInterest));
-  }, [homePrice, downPayment, loanTerm, interestRate, propertyTax, homeInsurance, hoaFees, utilities, calculatePrincipalInterest, calculateTotalPayment]);
+  }, [calculatePrincipalInterest, calculateTotalPayment]);
 
-  const handleDownPaymentPercentChange = (newPercent : number) => {
+  const handleDownPaymentPercentChange = (newPercent: number) => {
     setDownPaymentPercent(newPercent);
     setDownPayment(Math.round(homePrice * (newPercent / 100)));
   };
 
-  const handleDownPaymentChange = (newDownPayment : number) => {
+  const handleDownPaymentChange = (newDownPayment: number) => {
     setDownPayment(newDownPayment);
     setDownPaymentPercent((newDownPayment / homePrice) * 100);
   };
@@ -345,7 +345,7 @@ export default function MortgageCalculator() {
               Lenders determine how much you can afford on a monthly housing payment by calculating your debt-to-income ratio (DTI). The maximum DTI you can have in order to qualify for most mortgage loans is often between 45-50%, with your anticipated housing costs included.
             </p>
             <p className="text-gray-600 mb-4">
-              Your DTI is the balance between your income and your debt. It helps lenders understand how safe or risky it is for them to approve your loan. A DTI ratio represents how much of your gross monthly income is spoken for by creditors, and how much of it is left over to you as disposable income. It's most commonly written as a percentage. For example, if you pay half your monthly income in debt payments, you would have a DTI of 50%.
+              Your DTI is the balance between your income and your debt. It helps lenders understand how safe or risky it is for them to approve your loan. A DTI ratio represents how much of your gross monthly income is spoken for by creditors, and how much of it is left over to you as disposable income. It&apos;s most commonly written as a percentage. For example, if you pay half your monthly income in debt payments, you would have a DTI of 50%.
             </p>
             
             <div className="mt-6">
@@ -370,12 +370,12 @@ export default function MortgageCalculator() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">How to calculate monthly mortgage payments?</h2>
             <p className="text-gray-600 mb-4">
-              Your monthly mortgage payment includes loan principal and interest, property taxes, homeowners insurance, and mortgage insurance (PMI), if applicable. While not typically included in your mortgage payment, homeowners also pay monthly utilities and sometimes pay homeowners association (HOA) fees, so it's a good idea to factor these into your monthly budget. This mortgage calculator factors in all these typical monthly costs so you can really crunch the numbers.
+              Your monthly mortgage payment includes loan principal and interest, property taxes, homeowners insurance, and mortgage insurance (PMI), if applicable. While not typically included in your mortgage payment, homeowners also pay monthly utilities and sometimes pay homeowners association (HOA) fees, so it&apos;s a good idea to factor these into your monthly budget. This mortgage calculator factors in all these typical monthly costs so you can really crunch the numbers.
             </p>
             
             <h3 className="text-xl font-semibold mt-6 mb-4">Formula for calculating monthly mortgage payments</h3>
             <p className="text-gray-600 mb-4">
-              The easiest way to calculate your mortgage payment is to use a calculator, but for the curious or mathematically inclined, here's the formula for calculating principal and interest yourself:
+              The easiest way to calculate your mortgage payment is to use a calculator, but for the curious or mathematically inclined, here&apos;s the formula for calculating principal and interest yourself:
             </p>
             
             <div className="bg-gray-100 p-6 rounded-lg text-center mt-4">

@@ -11,7 +11,7 @@ export default function AboutUs() {
       <section className="max-w-6xl mx-auto px-4 pt-16 pb-12 md:pt-24 md:pb-20 text-center">
         <h2 className="text-green-600 font-medium mb-4">Our mission</h2>
         <h1 className="text-3xl md:text-5xl font-bold text-gray-800 max-w-4xl mx-auto">
-          We're making homeownership simpler, faster — and most importantly, more accessible for all Americans.
+          We&apos;re making homeownership simpler, faster — and most importantly, more accessible for all Americans.
         </h1>
       </section>
       
@@ -21,10 +21,10 @@ export default function AboutUs() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">The status quo is broken</h2>
             <p className="text-gray-600 mb-6">
-              The traditional processes around homeownership are opaque and stressful. Fees aren't transparent and some are simply outrageous in size. Traditional mortgage lending is rife with unnecessary fees and slow, painful processes. It's a system set up to benefit insiders — not you.
+              The traditional processes around homeownership are opaque and stressful. Fees aren&apos;t transparent and some are simply outrageous in size. Traditional mortgage lending is rife with unnecessary fees and slow, painful processes. It&apos;s a system set up to benefit insiders — not you.
             </p>
             <button className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-md">
-              Read Vishal's story
+              Read Vishal&apos;s story
             </button>
           </div>
           <div className="relative h-64 md:h-auto">
@@ -44,12 +44,12 @@ export default function AboutUs() {
       
       <section className="py-16 bg-green-600 text-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8">How we're changing things</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8">How we&apos;re changing things</h2>
           <p className="text-lg mb-6">
-            Homeownership is a huge part of our economy. Housing overall is a $33 trillion business, and mortgages account for $15 trillion. Yet home finance operates in the same way it has for decades — through opaque systems and expensive intermediaries whose interests are misaligned with consumers'.
+            Homeownership is a huge part of our economy. Housing overall is a $33 trillion business, and mortgages account for $15 trillion. Yet home finance operates in the same way it has for decades — through opaque systems and expensive intermediaries whose interests are misaligned with consumers&apos;.
           </p>
           <p className="text-lg">
-            That's why Better.com is redefining the homeownership process from the ground up. We're using technology to make it faster and more efficient, and humans to help make it friendly and enjoyable.
+            That&apos;s why Better.com is redefining the homeownership process from the ground up. We&apos;re using technology to make it faster and more efficient, and humans to help make it friendly and enjoyable.
           </p>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function AboutUs() {
               </div>
               <div className="ml-0 md:ml-auto md:w-5/12 bg-gray-100 p-6 rounded-lg mt-8 md:mr-8">
                 <p className="text-gray-700">
-                  After Vishal Garg's first attempt to purchase his own dream home, he quickly realized that the homebuying process is unnecessarily broken. This inspired him to found a technology-first company led by engineers and data experts with the mission of digitizing and automating home finance to make it cheaper, easier, and faster for all.
+                  After Vishal Garg&apos;s first attempt to purchase his own dream home, he quickly realized that the homebuying process is unnecessarily broken. This inspired him to found a technology-first company led by engineers and data experts with the mission of digitizing and automating home finance to make it cheaper, easier, and faster for all.
                 </p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function AboutUs() {
               </div>
               <div className="ml-0 md:ml-auto md:w-5/12 bg-gray-100 p-6 rounded-lg mt-8 md:mr-8">
                 <p className="text-gray-700">
-                  Better acquires Trussle — The UK's most innovative online mortgage broker.
+                  Better acquires Trussle — The UK&apos;s most innovative online mortgage broker.
                 </p>
               </div>
             </div>
