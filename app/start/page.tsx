@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, FormEvent, ChangeEvent } from 'react';
 import { Button } from '@/components/ui/ui/button';
 import { Card } from '@/components/ui/ui/card';
 import { Input } from '@/components/ui/ui/input';
@@ -9,20 +9,22 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/ui/radio-group';
 import { useToast } from '@/hooks/use-toast';
 import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/ui/Footer';
+import Image from 'next/image';
+
+type OptionType = 'buy' | 'refinance' | 'cashout' | null;
 
 export default function Start() {
   const [showWelcome, setShowWelcome] = useState(true);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<OptionType>(null);
   const [step, setStep] = useState(1);
   const { toast } = useToast();
 
-  const handleOptionSelect = (option : any) => {
+  const handleOptionSelect = (option: OptionType) => {
     setSelectedOption(option);
     setShowWelcome(false);
   };
 
-  //@ts-ignore
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     toast({
       title: "Application submitted",
@@ -46,14 +48,15 @@ export default function Start() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
           <div className="mb-8">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200">
-                <img 
+              <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 relative">
+                <Image 
                   src="/avatar-betsy.jpg" 
                   alt="Betsy" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    //@ts-ignore
-                    e.target.src = "https://via.placeholder.com/150";
+                  className="object-cover"
+                  width={64}
+                  height={64}
+                  onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+                    e.currentTarget.src = "https://via.placeholder.com/150";
                   }}
                 />
               </div>

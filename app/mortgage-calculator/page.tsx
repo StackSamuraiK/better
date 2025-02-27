@@ -51,7 +51,7 @@ export default function MortgageCalculator() {
     const calculatedPrincipalInterest = calculatePrincipalInterest();
     setPrincipalInterest(calculatedPrincipalInterest);
     setTotalMonthlyPayment(calculateTotalPayment(calculatedPrincipalInterest));
-  }, [homePrice, downPayment, loanTerm, interestRate, propertyTax, homeInsurance, hoaFees, utilities]);
+  }, [homePrice, downPayment, loanTerm, interestRate, propertyTax, homeInsurance, hoaFees, utilities, calculatePrincipalInterest, calculateTotalPayment]);
 
   const handleDownPaymentPercentChange = (newPercent : number) => {
     setDownPaymentPercent(newPercent);

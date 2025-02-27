@@ -120,12 +120,7 @@ const Footer = () => {
           <p className="mb-4">© {new Date().getFullYear()} Better Home & Finance Holding Company and/or its affiliates. Better is a family of companies. Better Mortgage Corporation provides home loans; Better Real Estate, LLC and Better Real Estate California Inc License # 02140955 provides real estate services; Better Cover, LLC sells insurance products; and Better Settlement Services provides title insurance services, and Better Inspect, LLC provides home inspection services. All rights reserved.</p>
           
           <p className="mb-4">Home lending products offered by Better Mortgage Corporation. Better Mortgage Corporation is a direct lender NMLS #330511. 1 World Trade Center, 80th Floor, New York, NY 10007. Loans made or arranged pursuant to a California Finance Lenders Law License. Not available in all states. Equal Housing Lender.</p>
-          
-          {/* Equal Housing Opportunity Logos */}
-          <div className="flex space-x-4">
-            <img src="/api/placeholder/50/50" alt="Equal Housing Lender logo" className="h-8 w-8" />
-            <img src="/api/placeholder/50/50" alt="Equal Housing Opportunity logo" className="h-8 w-8" />
-          </div>
+
         </div>
       </div>
     </footer>

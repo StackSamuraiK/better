@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/ui/button';
-import { Phone, Star, ArrowRight, Clock3 } from 'lucide-react';
+import {  Star, ArrowRight, Clock3 } from 'lucide-react';
 import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/ui/Footer';
 

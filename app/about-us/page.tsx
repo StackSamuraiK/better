@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/ui/Footer';
 
